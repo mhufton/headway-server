@@ -16,6 +16,7 @@ const typeDefs = gql`
   type Query {
     user(id: Int!): User
     links: [Link]
+    originalUrl(slug: String!): Link
   }
 
   type Mutation {

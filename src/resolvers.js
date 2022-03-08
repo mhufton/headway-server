@@ -8,6 +8,14 @@ const resolvers = {
     async links(root, {}, { models }) {
       return models.Link.findAll({ order: [["createdAt", "DESC"]], limit: 10 });
     },
+    // async originalUrl(root, slug, { models }) {
+    //   const urlData = models.Link.findOne({ slug })
+
+    //   if (!urlData) {
+    //     console.error({ error: 404, message: "url data not found"})
+    //   }
+    //   return urlData.url
+    // }
   },
   Mutation: {
     async createUser(root, { name, email, password }, { models }) {
