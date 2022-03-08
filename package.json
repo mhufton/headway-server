@@ -2,8 +2,7 @@
   "name": "apollo-server",
   "description": "",
   "dependencies": {
-    "apollo-server": "2.9.7",
-    "graphql": "14.5.8",
+    "apollo-server": "^2.9.7",
     "graphql-tag": "^2.10.1",
     "sequelize": "6.3.5",
     "sequelize-cli": "6.2.0",
@@ -12,11 +11,17 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js localhost 4000"
+    "start": "nodemon src/index.js localhost 4000",
+    "test": "mocha test/*.test.js"
   },
   "keywords": [],
   "devDependencies": {
     "@types/graphql": "14.0.1",
-    "nodemon": "1.18.4"
+    "chai": "^4.3.6",
+    "easygraphql-tester": "^6.0.1",
+    "graphql": "^14.7.0",
+    "mocha": "^9.2.1",
+    "nodemon": "^1.18.4",
+    "supertest": "^6.2.2"
   }
 }
